@@ -7,7 +7,7 @@ describe("Login", () => {
     })
 
     it("Successful login", () => {
-        cy.get("#user".type("testing@testing.com")
+        cy.get("#user").type("testing@testing.com")
         cy.get("#password").type("123456")
         cy.get("#btnLogin").click()
         cy.get(".swal2-title").should("be.visible")
