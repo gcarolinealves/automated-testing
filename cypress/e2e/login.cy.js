@@ -19,7 +19,7 @@ describe("Login", () => {
         cy.get("#password").type("123456")
         cy.get("#btnLogin").click()
         cy.get(".invalid_input").should("be.visible")
-        cy.get(".invalid_input").should("have.text", "Invalid email")
+        cy.get(".invalid_input").should("have.text", "Invalid E-mail")
     });
 
     it("Invalid password", () => {
@@ -27,6 +27,6 @@ describe("Login", () => {
         cy.get("#password").type("1")
         cy.get("#btnLogin").click()
         cy.get(".invalid_input").should("be.visible")
-        cy.get(".invalid_input").should("have.text", "Invalid Password")
+        cy.get(".invalid_input").should("have.text", "Senha inválida.")
     });
 });
